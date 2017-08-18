@@ -1,32 +1,24 @@
 #**Traffic Sign Recognition** 
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
+#The Project
 ---
-
-**Build a Traffic Sign Recognition Project**
-
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+* Load the data set
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./UnprocessedImage.png "Unprocessed Image"
+[image2]: ./PreprocessedImage.png "Preprocessed Image"
+[image3]: ./Histogram.png "Data stats"
+[image4]: ./AdditionalData/pic01.png "Traffic Sign 1"
+[image5]: ./AdditionalData/pic02.png "Traffic Sign 2"
+[image6]: ./AdditionalData/pic03.png "Traffic Sign 3"
+[image7]: ./AdditionalData/pic04.png "Traffic Sign 4"
+[image8]: ./AdditionalData/pic05.png "Traffic Sign 5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -55,14 +47,14 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is an example showing how the data looks like befor:
 
-![alt text][UnprocessedImage.png]
+![alt text][image1]
 
 and after the preprocessing:
 
-![alt text][PreprocessedImage.png]
+![alt text][image2]
 
 Also here is a histogram showing how the classes are distributed in the data set.
-![alt text][Histogram.png]
+![alt text][image3]
 
 ###Design and Test a Model Architecture
 
@@ -72,7 +64,7 @@ As a first step, I decided to adjust the brightness level of the images because 
 
 Here is an example of a traffic sign image before and after brightness ajustment.
 
-![alt text][PreprocessedImage.png]
+![alt text][image1]
 
 As a last step, I normalized the image data because the net should learn on normalized data to avoid lerning a bias and also to set the 
 activation function into a good working point from begin with.
@@ -166,8 +158,8 @@ Since the accuracy of training, validation and test set are fairly close rather 
 
 Here are five German traffic signs that I found on the web:
 
-![Picture 1][AdditionalData/pic01.png] ![Picture 2][AdditionalData/pic02.png] ![Picture 3][AdditionalData/pic03.png] 
-![Picture 4][AdditionalData/pic04.png] ![Picture 5][AdditionalData/pic05.png]
+![alt text][image4] ![alt text][image5] ![alt text][image6] 
+![alt text][image7] ![alt text][image8]
 
 The first image might be difficult to classify because the sign is croped, and the signs in the data set are fully visible all the time.
 The second image might be difficult to classify because there are not many examples in the data set for that class and it can be easyly confused with the 80km/h class due to similar shape and numbers. Also this image is distorded which might not fit any other image of this class in the data set.
@@ -244,6 +236,5 @@ For the fifth image, the model is farily sure that this is a Speed limit (50km/h
 | .02			| Wild animals crossing				|
 | .02	      		| Roundabout mandatory				|
 | .01	 		| Speed limit (20km/h)				|
-
 
 
