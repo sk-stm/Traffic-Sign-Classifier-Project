@@ -10,12 +10,12 @@
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
+
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
-
 
 [//]: # (Image References)
 
@@ -55,14 +55,14 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is an example showing how the data looks like befor:
 
-![alt text][UnprocessedImage.png]
+![unprocessed Image][./UnprocessedImage.png]
 
 and after the preprocessing:
 
-![alt text][PreprocessedImage.png]
+![Preprocessed Image][PreprocessedImage.png]
 
 Also here is a histogram showing how the classes are distributed in the data set.
-![alt text][Histogram.png]
+![Data stats][Histogram.png]
 
 ###Design and Test a Model Architecture
 
@@ -72,7 +72,7 @@ As a first step, I decided to adjust the brightness level of the images because 
 
 Here is an example of a traffic sign image before and after brightness ajustment.
 
-![alt text][PreprocessedImage.png]
+![Preprocessed image][PreprocessedImage.png]
 
 As a last step, I normalized the image data because the net should learn on normalized data to avoid lerning a bias and also to set the 
 activation function into a good working point from begin with.
@@ -244,6 +244,5 @@ For the fifth image, the model is farily sure that this is a Speed limit (50km/h
 | .02			| Wild animals crossing				|
 | .02	      		| Roundabout mandatory				|
 | .01	 		| Speed limit (20km/h)				|
-
 
 
