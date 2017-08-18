@@ -107,6 +107,11 @@ My final model consisted of the following layers:
 To train the model, I used an adam Optimizer because it's a good default choice to go to since it also includes momentum and other learning
 step adjustments compared to SGD.
 
+I use a dropout rate of 0.5 which is a good default value to start with. It appeared that this value is suficcient, however where might be better values. The same goes for the learning rate which I chose to be 0.001. It appeared that not much tweeking was necessary to reach even above 0.93
+Usually the more you train the more accurate your results are. It appeared to be a good value to create good results. Higher values would extend the training time a lot not gaining much mor accuracy.
+I used batches of 128 of imput pictures. This is a crutual parameter since no batch normalization is used in the model. The batch size has to be big enough to reflect the distribution of the training set. Sinse the training set only consists of 43 classes, the chance to have a non biased batch is rather small. However it turned out to work fine and no further initialisation or divergence problems were observed. So this values was chosen. Also I trained on my local computer, that could not handle a bigger batch size.
+
+
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
